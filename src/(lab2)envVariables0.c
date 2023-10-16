@@ -8,7 +8,7 @@ int main(int argc, char * argv[], char * envp[])
 
     for(int i = 0; envp[i] != NULL; i++) {
 //      printf("%s\n", envp[i]);
-        if (strcmp(envp[i], "HOME")) {
+        if (strcmp(envp[i], "HOME") == 0) {
             printf("Home : %s\n", envp[i]);
             break;
         }
