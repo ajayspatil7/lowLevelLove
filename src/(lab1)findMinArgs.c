@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int findEven(int numbers[], int minNum);
+int findMinimum(int numbers[], int minNum);
 
-int findEven(int numbers[], int minNum){
+int findMinimum(int numbers[], int minNum){
     int min = numbers[0];
 
     for(int i=1; i<minNum; i++){
-        if(numbers[i] % 2 == 0){
+        if(numbers[i] < min){
             min = numbers[i];
         }
     }
@@ -29,6 +29,6 @@ int main(int argc, char *argv[]){
         numbers[i] = atoi(argv[i+1]);
     }
 
-    printf("Even numbers : %d", findEven(numbers, size));
+    findMinimum(numbers, size);
 
 }
